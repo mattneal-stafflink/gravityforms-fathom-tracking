@@ -17,7 +17,7 @@ add_filter( 'gform_submit_button', 'add_form_name_to_button_for_fathom_analytics
 function add_form_name_to_button_for_fathom_analytics( $button, $form ) {
 
     $find = "<input type='submit'";
-    $replace = "<input type='submit' data-fathom='form-submit-{$form['title']}'";
+    $replace = "<input type='submit' data-fathom='{$form['title']}'";
 
     return str_replace( $find, $replace, $button );
 }
@@ -31,9 +31,9 @@ function add_form_name_to_button_for_fathom_analytics( $button, $form ) {
 function enqueue_fathom_scripts() {
 
     // Don't load on local or staging environments.
-    // if ( WP_ENV !== 'production' ) {
-    //     return;
-    // }
+    if ( WP_ENV !== 'production' ) {
+        return;
+    }
 
     wp_enqueue_script( 'gravityforms-fathom-script', plugin_dir_url( __FILE__ ) . '/gravityforms-fathom-tracking.js', '', '', false );
 }
