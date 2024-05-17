@@ -35,8 +35,6 @@ function enqueue_fathom_scripts() {
     //     return;
     // }
 
-    $script_path = WP_CONTENT_URL . '/mu-plugins/gravityforms-fathom-tracking/gravityforms-fathom-tracking.js';
-
-    wp_enqueue_script( 'gravityforms-fathom-script', $script_path, '', '', false );
+    wp_enqueue_script( 'gravityforms-fathom-script', plugin_dir_url( __FILE__ ) . '/gravityforms-fathom-tracking.js', '', '', false );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_fathom_scripts', 10 );
