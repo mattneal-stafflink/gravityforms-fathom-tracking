@@ -1,0 +1,18 @@
+{
+    "name": "mattneal/gravityforms-fathom-tracking",
+    "description": "A WordPress mu-plugin that tracks your Gravityforms submissions in Fathom Analytics.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Mattneal\\GravityformsFathomTracking\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matthew Neal",
+            "email": "matt.neal@stafflink.com.au"
+        }
+    ],
+    "require": {}
+}
