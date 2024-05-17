@@ -4,7 +4,7 @@ Plugin Name: Track Gravityforms Submissions with Fathom Analytics
 Plugin URI: https://realcoder.com.au/gravityforms-fathom-tracking/
 Description: A filter that adds a data attribute to Gravity form submit buttons to track form submissions with Fathom Analytics.
 Author: real_coder
-Version: 1.0
+Version: 1.1.0
 Author URI: https://realcoder.com.au/
 */
 
