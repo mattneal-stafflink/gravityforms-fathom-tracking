@@ -21,3 +21,22 @@ function add_form_name_to_button_for_fathom_analytics( $button, $form ) {
 
     return str_replace( $find, $replace, $button );
 }
+
+
+/**
+ * Enqueue the Script for Fathom.
+ *
+ * @return void
+ */
+function enqueue_fathom_scripts() {
+
+    // Don't load on local or staging environments.
+    // if ( WP_ENV !== 'production' ) {
+    //     return;
+    // }
+
+    $script_path = WP_CONTENT_URL . '/mu-plugins/gravityforms-fathom-tracking/gravityforms-fathom-tracking.js';
+
+    wp_enqueue_script( 'gravityforms-fathom-script', $script_path, '', '', false );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_fathom_scripts', 10 );
